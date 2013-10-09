@@ -1,0 +1,55 @@
+/* 
+    Document   : style
+    Created on : 8-okt-2013, 10:28:05
+    Author     : Jeffrey
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    
+    background:white;
+}
+
+#pagewrapper{
+    
+    position:relative;
+    margin:auto;
+    width:940px;
+    background:pink;
+}
+
+#header{
+    
+    background:blue;
+    width:940px;
+    height:200px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+#content{
+    
+    background:white;
+    width:940px;
+    min-height: 400px;
+    margin-top:20px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    
+}
+
+
+#footer{
+    
+    margin-top:20px;
+    background:green;
+    width:940px;
+    height:100px;
+    
+    
+}

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <title>TimeToWrite</title>
@@ -18,16 +16,25 @@
         </script>
     </head>
     <body>
-       
+  
+        <?php       
+        
+        include('config.php');
+        
+        $smarty = new Smarty();
+        
+        $smarty->template_dir = "views";
+        $smarty->compile_dir = "tmp";
+        
+        if(isset($_POST['username']) && !empty($_POST['username']) && !empty($_POST['password']));
+        {
+            
+        }
+        
+        $smarty->display('index.tpl');
+        
+        ?>
+        
     </body>
 </html>
 
-<?php
-
-include($_SERVER['DOCUMENT_ROOT']. '/timetowrite3.0/' . 'scripts/PDOconnect.php');
-
-
-$connection = new PDOconnect();
-
-
-?>
