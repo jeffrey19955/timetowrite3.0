@@ -8,7 +8,6 @@ $smarty = new Smarty();
  
 $smarty->compile_dir    = 'templates_c/';
 $smarty->template_dir   = 'templates/';
-$smarty->debugging      = false;
  
 $connection = new PDO('mysql:host=82.157.27.52;dbname=timetowrite', 'timetowrite', 'bPrMrYgp');
 ?>
