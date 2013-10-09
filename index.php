@@ -21,14 +21,22 @@
         
         include('config.php');
         
-        $smarty = new Smarty();
-        
-        $smarty->template_dir = "views";
-        $smarty->compile_dir = "tmp";
-        
-        if(isset($_POST['username']) && !empty($_POST['username']) && !empty($_POST['password']));
+        if(isset($_POST['login']));
         {
-            
+        $sql = "SELECT COUNT(*) 
+                FROM `users` 
+                WHERE (`username` = :user 
+                AND `password` = :pass)
+                GROUP BY `username`";
+        
+        $stmt = $connection->prepare($sql);
+        $stmt->bindParam(":user", $_POST['username']);
+        $stmt->bindParam(":pass", $_POST['password']);
+        $stmt->execute();
+        
+        $count = $stmt->fetch();
+        echo "test";
+        
         }
         
         $smarty->display('index.tpl');
